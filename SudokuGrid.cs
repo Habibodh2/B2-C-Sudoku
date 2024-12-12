@@ -12,27 +12,26 @@ namespace Sudoku {
 
 
         private bool FillGrid() {
-
-            for (int row = 0; row < 9; row++) {
-                for (int col = 0; col < 9; col++) {
-                    if (Grid[row, col] == 0) {
-
-                        for (int num = 1; num <= 9; num++) {
-                            if (IsValidMove(row, col, num)) {
-                                Grid[row, col] = num;
-                                if (FillGrid()) {
-                                    return true;
-                                }
-                                Grid[row, col] = 0;
-                            }
+    for (int row = 0; row < 9; row++) {
+        for (int col = 0; col < 9; col++) {
+            if (Grid[row, col] == 0) {
+                List<int> numbers = Enumerable.Range(1, 9).OrderBy(x => Guid.NewGuid()).ToList(); 
+                foreach (int num in numbers) {
+                    if (IsValidMove(row, col, num)) {
+                        Grid[row, col] = num;
+                        if (FillGrid()) {
+                            return true;
                         }
-                        return false;
+                        Grid[row, col] = 0;
                     }
                 }
+                return false; 
             }
-            SwapRandomRows();
-            return true;
         }
+    }
+    return true; 
+}
+
 
         public bool IsValidMove(int row, int col, int num) {
 
@@ -57,22 +56,21 @@ namespace Sudoku {
         }
 
         public void SwapRandomRows() {
+    Random rand = new Random();
+    int row1 = rand.Next(0, 9);
+    int row2 = rand.Next(0, 9);
 
-            Random rand = new Random();
-            int row1 = rand.Next(0, 9);
-            int row2;
-            int i = 0;//
-            do {
-                row2 = rand.Next(0, 9);
-                i++;//
-            } while (i < 9);
+    while (row1 / 3 != row2 / 3) { 
+        row2 = rand.Next(0, 9);
+    }
 
-            for (int col = 0; col < 9; col++) {
-                int temp = Grid[row1, col];
-                Grid[row1, col] = Grid[row2, col];
-                Grid[row2, col] = temp;
-            }
-        }
+    for (int col = 0; col < 9; col++) {
+        int temp = Grid[row1, col];
+        Grid[row1, col] = Grid[row2, col];
+        Grid[row2, col] = temp;
+    }
+}
+
 
         public void SwapRandomColumns() {
             Random rand = new Random();
@@ -128,15 +126,28 @@ namespace Sudoku {
             return IsValid();
         }
 
-        public void DisplayGrid() {
-
-            for (int row = 0; row < 9; row++) {
-                for (int col = 0; col < 9; col++) {
-                    Console.Write(Grid[row, col] == 0 ? ". " : Grid[row, col] + " ");
-                }
-                Console.WriteLine();
-            }
+        public void DisplayGrid()
+{
+    for (int row = 0; row < 9; row++)
+    {
+        if (row % 3 == 0 && row != 0)
+        {
+            Console.WriteLine("------+-------+------"); 
         }
+
+        for (int col = 0; col < 9; col++)
+        {
+            if (col % 3 == 0 && col != 0)
+            {
+                Console.Write("| "); 
+            }
+
+            Console.Write(Grid[row, col] == 0 ? ". " : Grid[row, col] + " ");
+        }
+
+        Console.WriteLine();
+    }
+}
     }
 
 }
