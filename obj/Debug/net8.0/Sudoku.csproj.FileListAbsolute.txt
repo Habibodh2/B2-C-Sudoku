@@ -1,0 +1,15 @@
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/Sudoku.GeneratedMSBuildEditorConfig.editorconfig
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/Sudoku.AssemblyInfoInputs.cache
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/Sudoku.AssemblyInfo.cs
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/Sudoku.csproj.CoreCompileInputs.cache
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/Sudoku.sourcelink.json
+/Users/harrykinsey/TestC#/Sudoku/bin/Debug/net8.0/Sudoku
+/Users/harrykinsey/TestC#/Sudoku/bin/Debug/net8.0/Sudoku.deps.json
+/Users/harrykinsey/TestC#/Sudoku/bin/Debug/net8.0/Sudoku.runtimeconfig.json
+/Users/harrykinsey/TestC#/Sudoku/bin/Debug/net8.0/Sudoku.dll
+/Users/harrykinsey/TestC#/Sudoku/bin/Debug/net8.0/Sudoku.pdb
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/Sudoku.dll
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/refint/Sudoku.dll
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/Sudoku.pdb
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/Sudoku.genruntimeconfig.cache
+/Users/harrykinsey/TestC#/Sudoku/obj/Debug/net8.0/ref/Sudoku.dll
